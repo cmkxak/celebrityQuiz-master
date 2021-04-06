@@ -24,6 +24,8 @@ public class StartActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide(); //액션바 숨김
 
+        startService(new Intent(getApplicationContext(), MusicService.class));
+
         btn_start= (Button)findViewById(R.id.btn_start);
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
