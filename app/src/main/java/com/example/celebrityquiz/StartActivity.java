@@ -50,7 +50,8 @@ public class StartActivity extends AppCompatActivity {
         btn_chkscore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                startActivity(intent);
             }
         });
 

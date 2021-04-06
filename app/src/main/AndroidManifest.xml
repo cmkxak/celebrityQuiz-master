@@ -27,6 +27,8 @@
 
         <activity android:name="com.example.celebrityquiz.MainActivity"></activity>
 
+        <activity android:name="com.example.celebrityquiz.ProfileActivity"></activity>
+
         <activity
             android:name="com.example.celebrityquiz.QuizActivity"
           android:parentActivityName="com.example.celebrityquiz.MainActivity">
