@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +50,11 @@ public class SolutionActivity extends AppCompatActivity{
         SolutionAdapter solutionAdapter = new SolutionAdapter(quizList, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(solutionAdapter);
+    }
+    public void onBackPressed() {
+        Intent i = new Intent(SolutionActivity.this, StartActivity.class);
+        startActivity(i);
+        super.onBackPressed();
     }
 
     // Function to display well done image if user gets all correct | also settings for total value
