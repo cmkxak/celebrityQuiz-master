@@ -1,6 +1,7 @@
 package com.example.celebrityquiz;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -31,7 +32,7 @@ public class QuizActivity extends AppCompatActivity {
 
     // Declare variables
     private List<Quiz> quizList;
-    private int seconds;
+    private int seconds, scores;
     private int indexCurrentQuestion;
 
     private TextView questionView;
@@ -107,6 +108,7 @@ public class QuizActivity extends AppCompatActivity {
         seconds = intent.getIntExtra("seconds", new Random().nextInt(90));
         String string = null;
 
+
         // Safely read data from saved file
         try {
             FileInputStream fileInputStream = openFileInput("myJson"); //파일 불러오기
@@ -162,6 +164,17 @@ public class QuizActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SharedPreferences sharedPreferences = getSharedPreferences("scores", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int scores = getScore();
+        editor.putInt("scores", scores);
+        editor.commit();
     }
 
     // Start countdown. OnFinish, start Solution Activity
@@ -278,4 +291,6 @@ public class QuizActivity extends AppCompatActivity {
         }
         return score;
     }
+
+
 }
