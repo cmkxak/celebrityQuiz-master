@@ -107,7 +107,8 @@ public class RegisterUserActivity extends AppCompatActivity implements View.OnCl
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful()){
-                                    Toast.makeText(RegisterUserActivity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_LONG).show();;
+                                    Toast.makeText(RegisterUserActivity.this, "회원가입이 완료되었습니다.", Toast.LENGTH_LONG).show();
+                                    startActivity(new Intent(RegisterUserActivity.this, LoginActivity.class));
                                 }else
                                     Toast.makeText(RegisterUserActivity.this, "회원가입 실패", Toast.LENGTH_LONG).show();
                             }
