@@ -36,7 +36,7 @@
             android:name="com.example.celebrityquiz.SolutionActivity"
             android:parentActivityName="com.example.celebrityquiz.MainActivity">
         </activity>
-
+        <service android:name=".MusicService"/>
 
     </application>
 

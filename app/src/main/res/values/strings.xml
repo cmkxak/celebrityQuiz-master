@@ -24,4 +24,6 @@
     <string name="submit">Submit</string>
     <string name="update">Update from Internet</string>
     <string name="startQuiz">Start Quiz</string>
+    <string name="musicStart">Music Start</string>
+    <string name="musicStop">Music Stop</string>
 </resources>

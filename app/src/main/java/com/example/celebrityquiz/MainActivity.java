@@ -24,11 +24,25 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonStartQuiz;
     public int level;
     public int seconds;
-
+    Button btn_start, btn_stop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn_start = (Button)findViewById(R.id.btn_start);
+        btn_stop = (Button)findViewById(R.id.btn_stop);
+
+        btn_start.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startService(new Intent(getApplicationContext(), MusicService.class));
+            }
+        });
+        btn_stop.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                stopService(new Intent(getApplicationContext(), MusicService.class));
+            }
+        });
 
         // Define Level views
         radioButtonLevelOne = findViewById(R.id.radioButtonLevelOne);
