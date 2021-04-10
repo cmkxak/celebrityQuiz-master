@@ -110,6 +110,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                      }
                  }else{
                      Toast.makeText(LoginActivity.this, "유효하지 않은 정보입니다!", Toast.LENGTH_LONG).show(); //로그인 실패
+                     progressBar.setVisibility(View.INVISIBLE);
                  }
              }
          });
