@@ -5,13 +5,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -50,9 +49,15 @@ public class SolutionActivity extends AppCompatActivity{
         SolutionAdapter solutionAdapter = new SolutionAdapter(quizList, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(solutionAdapter);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("scores", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int scores = scoreValue;
+        editor.putInt("scores", scores);
+        editor.commit();
     }
     public void onBackPressed() {
-        Intent i = new Intent(SolutionActivity.this, StartActivity.class);
+        Intent i = new Intent(SolutionActivity.this, MainActivity.class);
         startActivity(i);
         super.onBackPressed();
     }

@@ -32,7 +32,7 @@ public class QuizActivity extends AppCompatActivity {
 
     // Declare variables
     private List<Quiz> quizList;
-    private int seconds, scores;
+    private int seconds;
     private int indexCurrentQuestion;
 
     private TextView questionView;
@@ -167,15 +167,15 @@ public class QuizActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        SharedPreferences sharedPreferences = getSharedPreferences("scores", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        int scores = getScore();
-        editor.putInt("scores", scores);
-        editor.commit();
-    }
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        SharedPreferences sharedPreferences = getSharedPreferences("scores", MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPreferences.edit();
+//        int scores = getScore();
+//        editor.putInt("scores", scores);
+//        editor.commit();
+//    }
 
     // Start countdown. OnFinish, start Solution Activity
     public void startTimer() {
