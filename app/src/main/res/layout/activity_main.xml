@@ -11,9 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="136dp"
-        android:fontFamily="sans-serif-black"
+
         android:gravity="center"
         android:text="Celebrity Quiz"
+        android:fontFamily="@font/hyobong"
         android:textAlignment="center"
         android:textSize="60sp"
         android:textStyle="bold"

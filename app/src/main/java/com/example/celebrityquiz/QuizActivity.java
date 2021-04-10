@@ -137,7 +137,7 @@ public class QuizActivity extends AppCompatActivity {
             quizList = list.subList(5, 10);
         } else {
             assert list != null;
-            quizList = list.subList(10, 15);
+            quizList = list.subList(11, 16);
         }
 
         // initialise and set for each index in current activity as current question (현재 문제에 관한 현재 액티비티 인덱스 설정 및 인덱스 초기화)

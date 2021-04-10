@@ -20,7 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
-public class ProfileActivity extends AppCompatActivity {
+public class
+ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference ref;
     private String userID;

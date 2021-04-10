@@ -23,11 +23,12 @@
 
         <activity android:name="com.example.celebrityquiz.RegisterUserActivity"></activity>
 
-        <activity android:name="com.example.celebrityquiz.StartActivity"></activity>
-
         <activity android:name="com.example.celebrityquiz.MainActivity"></activity>
 
+        <activity android:name="com.example.celebrityquiz.SettingActivity"></activity>
+
         <activity android:name="com.example.celebrityquiz.ProfileActivity"></activity>
+
 
         <activity
             android:name="com.example.celebrityquiz.QuizActivity"

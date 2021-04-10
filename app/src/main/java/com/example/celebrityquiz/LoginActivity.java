@@ -1,5 +1,6 @@
 package com.example.celebrityquiz;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -101,7 +102,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                      FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                      if(user.isEmailVerified()){
-                     Intent intent  = new Intent(LoginActivity.this, StartActivity.class);
+                     Intent intent  = new Intent(LoginActivity.this, MainActivity.class);
                      startActivity(intent);
                      } else {
                          user.sendEmailVerification();
