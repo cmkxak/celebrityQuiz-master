@@ -1,8 +1,12 @@
 package com.example.celebrityquiz;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.UserHandle;
+import android.view.LayoutInflater;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
+import java.util.Objects;
+
 public class
 ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
@@ -29,6 +35,12 @@ ProfileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        Objects.requireNonNull(getSupportActionBar()).hide(); //액션바 제거
+
+        LinearLayout userinfolayout = findViewById(R.id.container);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.sub_profile, userinfolayout,true);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         ref = FirebaseDatabase.getInstance().getReference("Users");
@@ -47,8 +59,8 @@ ProfileActivity extends AppCompatActivity {
                     String nickName = userProfile.nickName;
                     String email = userProfile.email;
 
-                    emailTextView.setText(email);
-                    nickNameTextView.setText(nickName);
+                    emailTextView.setText("이메일 주소    " + email);
+                    nickNameTextView.setText("닉네임             " + nickName);
                 }
             }
             @Override
@@ -59,7 +71,8 @@ ProfileActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("scores", 0);
         int score = sharedPreferences.getInt("scores", 0);
-        scoreTextView.setText(String.valueOf(score));
+        scoreTextView.setText(String.valueOf(score) + "점");
+
 
     }
 }
