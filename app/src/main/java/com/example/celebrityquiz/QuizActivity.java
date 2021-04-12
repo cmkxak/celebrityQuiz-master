@@ -131,13 +131,13 @@ public class QuizActivity extends AppCompatActivity {
         // Set sublist based on user set level
         if (level == 1) {
             assert list != null;
-            quizList = list.subList(0, 5);
+            quizList = list.subList(0, 10);
         } else if (level == 2) {
             assert list != null;
-            quizList = list.subList(5, 10);
+            quizList = list.subList(15, 25);
         } else {
             assert list != null;
-            quizList = list.subList(11, 16);
+            quizList = list.subList(25, 35);
         }
 
         // initialise and set for each index in current activity as current question (현재 문제에 관한 현재 액티비티 인덱스 설정 및 인덱스 초기화)
