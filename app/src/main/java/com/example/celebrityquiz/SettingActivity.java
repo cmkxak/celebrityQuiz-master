@@ -2,12 +2,15 @@ package com.example.celebrityquiz;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -30,19 +33,6 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        btn_start = (Button)findViewById(R.id.btn_start);
-        btn_stop = (Button)findViewById(R.id.btn_stop);
-
-        btn_start.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                startService(new Intent(getApplicationContext(), MusicService.class));
-            }
-        });
-        btn_stop.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                stopService(new Intent(getApplicationContext(), MusicService.class));
-            }
-        });
 
         // Define Level views
         radioButtonLevelOne = findViewById(R.id.radioButtonLevelOne);
@@ -70,6 +60,28 @@ public class SettingActivity extends AppCompatActivity {
         buttonUpdate.setEnabled(true);
         buttonStartQuiz.setEnabled(false);
         downloadTask = null; // Always initialize task to null
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.setting_menu , menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int curId = item.getItemId();
+        switch (curId){
+            case R.id.btn_soundon :
+                startService(new Intent(getApplicationContext(), MusicService.class));
+                break;
+            case R.id.btn_soundoff :
+                stopService(new Intent(getApplicationContext(), MusicService.class));
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private DownloadTask downloadTask;

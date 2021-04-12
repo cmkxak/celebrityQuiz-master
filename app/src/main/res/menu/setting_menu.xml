@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SettingActivity">
+
+    <item
+        android:id="@+id/btn_soundon"
+        android:icon="@drawable/button_sound"
+        app:showAsAction="always"
+        android:title="@string/back"/>
+    <item
+        android:id="@+id/btn_soundoff"
+        android:icon="@drawable/soundoffimage"
+        app:showAsAction="always"
+        android:title=""/>
+</menu>
