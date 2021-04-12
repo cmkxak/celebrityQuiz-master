@@ -3,8 +3,8 @@
 <resources>
     <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#AFAFAF</color>
-    <color name="colorAccent">#ff8000</color>
-    <color name="colorAccentDisabled">#DE8F40</color>
+    <color name="colorAccent">#50A0DF</color>
+    <color name="colorAccentDisabled">#50A0DF</color>
     <color name="colorSecondary">#F5F5F5</color>
     <color name="colorSecondaryDark">#CACACA</color>
     <color name="colorBackground">#EEEEEE</color>
