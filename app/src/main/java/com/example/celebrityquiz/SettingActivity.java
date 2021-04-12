@@ -123,7 +123,7 @@ public class SettingActivity extends AppCompatActivity {
     public void onButtonUpdate(View view) {
         if(downloadTask == null) {
             // Import data from internet
-            String jsonUrl = "https://api.jsonbin.io/b/6071ad2cceba857326725994/2";
+            String jsonUrl = "https://api.jsonbin.io/b/6071ad2cceba857326725994/6";
             downloadTask = new DownloadTask(downloadListener, this);
             downloadTask.execute(jsonUrl);
         }

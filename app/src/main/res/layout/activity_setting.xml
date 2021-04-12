@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="@string/settingsTitle"
+        android:text="Category"
         app:layout_constraintStart_toStartOf="@+id/levelBackground"
         app:layout_constraintTop_toTopOf="@+id/levelBackground" />
 
@@ -47,19 +47,19 @@
             android:id="@+id/radioButtonLevelOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/level1" />
+            android:text="Hollywood Actor" />
 
         <RadioButton
             android:id="@+id/radioButtonLevelTwo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/level2" />
+            android:text="Korean Actor" />
 
         <RadioButton
             android:id="@+id/radioButtonLevelThree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/level3" />
+            android:text="Korean Actress" />
     </RadioGroup>
 
     <!-- Time -->
