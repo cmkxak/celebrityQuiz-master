@@ -62,7 +62,7 @@ public class RegisterUserActivity extends AppCompatActivity implements View.OnCl
 
     private void registerUser() {
         final String email = edtEmail.getText().toString().trim();
-        String password = edtPassword.getText().toString().trim();
+        final String password = edtPassword.getText().toString().trim();
         final String nickname = edtNickname.getText().toString().trim();
 
         if(nickname.isEmpty()) {
@@ -94,7 +94,6 @@ public class RegisterUserActivity extends AppCompatActivity implements View.OnCl
             return;
         }
 
-        //progressBar 세팅하기
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
