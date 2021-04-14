@@ -26,8 +26,7 @@ import org.w3c.dom.Text;
 
 import java.util.Objects;
 
-public class
-ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference ref;
     private String userID;
