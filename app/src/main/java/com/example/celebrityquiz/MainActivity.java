@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 Random random = new Random();
 
                 intent.putExtra("level", random.nextInt(3));
-                intent.putExtra("seconds",random.nextInt(90));
+                intent.putExtra("seconds",30);
                 startActivity(intent);
             }
         });

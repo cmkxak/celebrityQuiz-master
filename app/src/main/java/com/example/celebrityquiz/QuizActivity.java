@@ -105,7 +105,7 @@ public class QuizActivity extends AppCompatActivity {
         // Access intent interface and get variables
         Intent intent = getIntent();
         int level = intent.getIntExtra("level", new Random().nextInt(3));
-        seconds = intent.getIntExtra("seconds", new Random().nextInt(90));
+        seconds = intent.getIntExtra("seconds", 30);
         String string = null;
 
 
