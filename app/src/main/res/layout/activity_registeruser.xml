@@ -20,7 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.089" />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,11 +73,17 @@
         android:id="@+id/btn_registeruser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="#5C87A8"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#FAFAFA"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         android:text="REGISTER USER"
+        android:textColor="#6190FF"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_email"
-        app:layout_constraintVertical_bias="0.206"
-        tools:layout_editor_absoluteX="-16dp" />
+        app:layout_constraintVertical_bias="0.293"
+        tools:layout_editor_absoluteX="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
